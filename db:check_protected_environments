@@ -1,0 +1,30 @@
+D, [2020-05-17T05:44:05.233109 #4] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-05-17T05:44:05.246008 #4] DEBUG -- :   [1m[35m (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-05-17T05:44:05.249580 #4] DEBUG -- :   [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-05-17T05:44:05.253237 #4] DEBUG -- :   [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-05-17T05:44:05.256844 #4] DEBUG -- :   [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-05-17T05:44:05.260564 #4] DEBUG -- :   [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+rake aborted!
+ActiveRecord::ProtectedEnvironmentError: You are attempting to run a destructive action against your 'production' database.
+If you are sure you want to continue, run the same command with the environment variable:
+DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+/app/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.3/lib/active_record/tasks/database_tasks.rb:63:in `check_protected_environments!'
+/app/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.3/lib/active_record/railties/databases.rake:15:in `block (2 levels) in <main>'
+/app/vendor/bundle/ruby/2.6.0/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:74:in `load'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:28:in `run'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli.rb:465:in `exec'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli.rb:27:in `dispatch'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/cli.rb:18:in `start'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/exe/bundle:30:in `block in <top (required)>'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+/app/vendor/bundle/ruby/2.6.0/gems/bundler-2.0.2/exe/bundle:22:in `<top (required)>'
+/app/bin/bundle:113:in `load'
+/app/bin/bundle:113:in `<main>'
+Tasks: TOP => db:schema:load => db:check_protected_environments
+(See full trace by running task with --trace)

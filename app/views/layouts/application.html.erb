@@ -28,8 +28,8 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
+                <% if user_signed_in? %>
               <p class="control">
-                <%= if user_signed_in? %>
                 <%= link_to 'New Tweeet', root_path, class: "button is-info" %>
               </p>
               <% end %>
