@@ -28,6 +28,15 @@ img {
   }
 }
 
+.spacing {
+  margin-bottom: 2px;
+}
+
 .notification:not(:last-child) {
   margin-bottom: 0px;
+}
+
+.shadow-xl	{
+  box-shadow: 5px 20px 25px -5px rgba(0, 0, 0, 0.1),
+              5px 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
