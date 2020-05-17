@@ -10,7 +10,7 @@
 
   </head>
 
-  <body>
+  <body class="bg-gray">
 
 
     <nav class="navbar is-info">
@@ -29,7 +29,7 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <%= link_to 'New Tweeet', new_tweeet_path, class: "button is-info is-inverted" %>
+                <%= link_to 'New Tweeet', root_path, class: "button is-info" %>
               </p>
               <% if user_signed_in? %>
               <p class="control">
@@ -38,7 +38,12 @@
               <p class="control">
                 <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "button is-danger" %>
               </p>
+              <% else %>
+              <p class="control">
+                <%= link_to 'Sign in', new_user_session_path, class: "button is-info" %>
+              </p>
               <% end %>
+
             </div>
           </div>
         </div>

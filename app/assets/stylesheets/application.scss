@@ -14,7 +14,8 @@
  *= require_self
  */
 
-@import "bulma";
+
+
 
 .navbar-brand .title {
   color: white;
@@ -40,3 +41,22 @@ img {
   box-shadow: 5px 20px 25px -5px rgba(0, 0, 0, 0.1),
               5px 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
+.bg-gray {
+  color: #f6f6f6;
+}
+
+$turquoise: #87a8a7;
+
+$cyan: #1069a8;
+
+
+$green: #5ead6a;
+
+
+$yellow: #db9d32;
+
+
+$red: #f44336;
+
+ @import "bulma";
